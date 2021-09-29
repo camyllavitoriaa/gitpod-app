@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @concessionarium.nome %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @concessionarium.cidade %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @concessionarium.endereco %>
+</p>
+
+<p>
+  <strong>Anos de mercado:</strong>
+  <%= @concessionarium.anos_de_mercado %>
+</p>
+
+<%= link_to 'Edit', edit_concessionarium_path(@concessionarium) %> |
+<%= link_to 'Back', concessionaria_path %>

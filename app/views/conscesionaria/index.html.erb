@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Conscesionaria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cidade</th>
+      <th>Endereco</th>
+      <th>Anos de mercado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @conscesionaria.each do |conscesionarium| %>
+      <tr>
+        <td><%= conscesionarium.nome %></td>
+        <td><%= conscesionarium.cidade %></td>
+        <td><%= conscesionarium.endereco %></td>
+        <td><%= conscesionarium.anos_de_mercado %></td>
+        <td><%= link_to 'Show', conscesionarium %></td>
+        <td><%= link_to 'Edit', edit_conscesionarium_path(conscesionarium) %></td>
+        <td><%= link_to 'Destroy', conscesionarium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Conscesionarium', new_conscesionarium_path %>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :concessionaria
+  resources :conscesionaria
   resources :clientes
   resources :carros
   root to: "clientes#index"

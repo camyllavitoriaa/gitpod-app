@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Concessionaria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cidade</th>
+      <th>Endereco</th>
+      <th>Anos de mercado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @concessionaria.each do |concessionarium| %>
+      <tr>
+        <td><%= concessionarium.nome %></td>
+        <td><%= concessionarium.cidade %></td>
+        <td><%= concessionarium.endereco %></td>
+        <td><%= concessionarium.anos_de_mercado %></td>
+        <td><%= link_to 'Show', concessionarium %></td>
+        <td><%= link_to 'Edit', edit_concessionarium_path(concessionarium) %></td>
+        <td><%= link_to 'Destroy', concessionarium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Concessionarium', new_concessionarium_path %>

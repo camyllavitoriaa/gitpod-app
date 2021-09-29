@@ -1,0 +1,37 @@
+<%= form_with(model: concessionarium) do |form| %>
+  <% if concessionarium.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(concessionarium.errors.count, "error") %> prohibited this concessionarium from being saved:</h2>
+
+      <ul>
+        <% concessionarium.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cidade %>
+    <%= form.text_field :cidade %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :anos_de_mercado %>
+    <%= form.text_field :anos_de_mercado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

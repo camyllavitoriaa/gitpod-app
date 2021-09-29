@@ -1,0 +1,2 @@
+module ConscesionariaHelper
+end
