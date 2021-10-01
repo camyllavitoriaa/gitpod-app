@@ -5,10 +5,12 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Placa</th>
       <th>Modelo</th>
       <th>Chassi</th>
       <th>Ano</th>
+      <th>cliente</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,13 +18,15 @@
   <tbody>
     <% @carros.each do |carro| %>
       <tr>
+        <td><%= carro.id %></td>
         <td><%= carro.placa %></td>
         <td><%= carro.modelo %></td>
         <td><%= carro.chassi %></td>
         <td><%= carro.ano %></td>
-        <td><%= link_to 'detalhes', carro, class: "bt-info" %></td>
-        <td><%= link_to 'Editar', edit_carro_path(carro) %></td>
-        <td><%= link_to 'Deletar', carro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= carro.try(:cliente).try(:nome) %></td>
+        <td><%= link_to 'detalhes', carro, class: "bt-info bt" %></td>
+        <td><%= link_to 'Editar', edit_carro_path(carro), class: "bt-blue bt" %></td>
+        <td><%= link_to 'Deletar', carro, class: "bt-red bt", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +34,4 @@
 
 <br>
 
-<%= link_to 'cadastrar Carro', new_carro_path, id: "bt-green" %>
+<%= link_to 'cadastrar Carro', new_carro_path, class: "bt-green bt" %>

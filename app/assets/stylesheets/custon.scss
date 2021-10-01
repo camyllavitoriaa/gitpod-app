@@ -25,18 +25,40 @@ body {
 
     padding: 20px 40px;
 }
-#bt-green {
-    padding: 12px 10px;
+.bt-green {
+    padding: 8px 14px;
     background-color: aqua;
     color: black;
     text-decoration: none;
     border-radius: 10px;
 }
 .bt-info {
-    padding: 12px 10px;
-    background-color: rgb(4, 102, 148);
+    padding: 8px 14px;
+    background-color:red ;
     color: white;
     text-decoration: none;
     border-radius: 10px;
 
+}
+.bt-blue {
+
+    padding: 8px 14px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+.bt-red {
+
+    padding: 8px 14px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+
+}
+
+.bt:visited {
+    color: white;
 }

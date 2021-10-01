@@ -31,7 +31,14 @@
     <%= form.number_field :ano %>
   </div>
 
+  <div class="field">
+    <%= form.label :cliente %>
+    <%= form.select :cliente_id, Cliente.all.map{ |l| [l.nome, l.id] }, {:include_blank => 'Selecione o cliente'} %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
+
 <% end %>

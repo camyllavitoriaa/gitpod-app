@@ -20,9 +20,9 @@
         <td><%= concessionarium.cidade %></td>
         <td><%= concessionarium.endereco %></td>
         <td><%= concessionarium.anos_de_mercado %></td>
-        <td><%= link_to 'Show', concessionarium %></td>
-        <td><%= link_to 'Edit', edit_concessionarium_path(concessionarium) %></td>
-        <td><%= link_to 'Destroy', concessionarium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', concessionarium, class: "bt-info bt" %></td>
+        <td><%= link_to 'Edit', edit_concessionarium_path(concessionarium), class: "bt-blue bt" %></td>
+        <td><%= link_to 'Destroy', concessionarium, class: "bt-red bt", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +31,4 @@
 <br>
 
 
-<%= link_to 'nova concessionaria', new_concessionarium_path , id: "bt-green" %>
+<%= link_to 'nova concessionaria', new_concessionarium_path, class: "bt-green" %>
